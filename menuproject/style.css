@@ -1,0 +1,84 @@
+
+        h2 {
+            text-align: center;
+            font-size: 4rem;
+        }
+        .btn-container {
+            text-align: center;
+        }
+        hr {
+            border: 3px solid goldenrod;
+            width: 100px;
+            
+          
+        }
+        .filter-btn {
+            background: transparent;
+            border-color: goldenrod;
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            margin: 0 0.5rem;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            padding: 10px;
+            color: black;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .filter-btn:hover {
+            background: goldenrod;
+            color: white;
+        }
+        .section-center {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            padding: 3rem;
+        }
+        .photo {
+            width: 400px;
+           height: 300px;
+            border: 6px solid goldenrod;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .menu-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid #f0f0f0;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .menu-item:hover {
+            transform: scale(1.05);
+        }
+        .item-info {
+            padding-left: 2rem;
+            max-width: 70%;
+            padding-bottom: 6.5rem;
+        }
+        .item-info header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px dotted #ccc;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .item-info h4 {
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+        .price {
+            color: goldenrod;
+        }
+        .item-text {
+            margin-bottom: 0;
+            padding-top: 1rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #555;
+        }
+    

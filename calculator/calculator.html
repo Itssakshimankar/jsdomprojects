@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			background-color: #f0f0f0;
+		}
+		
+		.container {
+			max-width: 400px;
+			background-color: gray;
+			border: 2px solid rebeccapurple;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.button{
+			display:grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			
+
+		}
+		#display{
+			height: 80px;
+			background-color: rgb(201, 160, 239);
+			color: white;
+			font-size: 30px;
+			text-align: right;
+		}
+		.btn {
+			padding: 30px;
+			text-align: center;
+			font-size: 20px;
+			border: 1px solid black;
+			border-radius: 5px;
+			background-color: whitesmoke;
+		}
+		.btn:hover {
+			background-color: #a49c9c;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="display"></div>
+		<div class="button">
+			<div class="btn">7</div>
+			<div class="btn">8</div>
+			<div class="btn">9</div>
+			<div class="btn">AC</div>
+			<div class="btn">4</div>
+			<div class="btn">5</div>
+			<div class="btn">6</div>
+			<div class="btn">%</div>
+               <div class="btn">1</div>
+			<div class="btn">2</div>
+			<div class="btn">3</div>
+			<div class="btn">-</div>
+			<div class="btn">0</div>
+			<div class="btn">00</div>
+			<div class="btn">/</div>
+			<div class="btn">del</div>
+			<div class="btn">1/x</div>
+			<div class="btn">=</div>
+			<div class="btn">PI</div>
+			<div class="btn">^</div>
+			<div class="btn">tan</div>
+			<div class="btn">sin</div>
+			<div class="btn">cos</div>
+			<div class="btn">log</div>
+
+
+
+
+
+		</div>
+
+	</div>
+	<script>
+		let show=document.getElementById("display");
+		let button=Array.from(document.getElementsByClassName('btn'))
+		button.map((btn)=> {
+			btn.addEventListener('click',value);
+
+		})
+		function value(e){
+			let key=e.target.innerText;
+
+			if(key === 'AC'){
+				show.innerText='';
+			}
+			else if(key === '='){
+				show.innerText = eval(show.innerText);
+			}
+			else if(key === 'del')
+			{
+				show.innerHTML = show.innerText.slice(0,-1)
+			}
+			else if (key === 'PI') {
+				show.innerText = Math.PI*(show.innerText);
+			}
+			else if (key === '^') {
+				show.innerText += '**';
+			}
+			else if(key === '1/x'){
+                show.innerText = eval(1/show.innerText);
+               }
+			
+			else if(key === '%'){
+                show.innerText = eval(show.innerText) / 100;
+              }
+		    else if (key === 'log') {
+               show.innerText = Math.log(show.innerText);
+		    }
+
+              else if (key === '%') {
+                   show.innerText += '/100';
+             } 
+             else if (key === 'cos') {
+               show.innerText = Math.cos(show.innerText);
+		   }
+
+              else if (key === 'sin') {
+			show.innerText = Math.sin(show.innerText);
+		    }
+		    else if (key === 'tan') {
+			show.innerText = Math.tan(show.innerText);
+		    }
+
+			else{
+				show.innerText += key
+			}
+
+		}
+	</script>
+</body>
+</html>

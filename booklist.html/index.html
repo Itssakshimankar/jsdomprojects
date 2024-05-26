@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Tracker</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <section class="middle">
+    <form class="books-form">
+      <p class="alert"></p>
+      <h3>Books List</h3>
+      <div class="form-control">
+        <input type="text" id="full-name" placeholder="Full Name" />
+        <input type="email" id="email" placeholder="Your Email" />
+        <input type="text" id="book-name" placeholder="Book Name" />
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+    </form>
+    <div class="books-container">
+      <div class="books-list"></div>
+      <button type="button" class="clear-btn">Clear Data</button>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

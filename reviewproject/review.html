@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEO Reviews</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9bebe;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            padding: 4rem;
+            max-width: 800px;
+           height: 1000px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .container:hover {
+            transform: translateY(-10px);
+        }
+        .title {
+            margin-bottom: 16px;
+        }
+        .title h1 {
+            font-size: 3rem;
+            color: #333;
+            margin: 0;
+        }
+        .underline {
+            width: 5rem;
+            height: 4px;
+            background: #3498db;
+            margin: 0.5rem auto;
+        }
+        .review {
+            margin-top: 16px;
+            padding: 80px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+        .img-container {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            border: 3px solid #3498db;
+        }
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #author {
+            font-size: 1.9rem;
+            margin-top: 1rem;
+            color: #333;
+        }
+        #job {
+            font-size: 2rem;
+            color: #044781;
+            margin-bottom: 1rem;
+        }
+        #info {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            gap: 10px;
+            margin-top: 2rem;
+        }
+        .button-container button {
+            background: #0e7ec9;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.4rem;
+            border-radius: 3px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            outline: none;
+        }
+        .button-container button:hover {
+            background: #5cb8f1;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="title">
+                <h1>CEO Reviews</h1>
+                <div class="underline"></div>
+            </div>
+            <article class="review">
+                <div class="img-container">
+                    <img id="person-img" src="photo.jpeg" alt="Profile Image">
+                </div>
+                <h3 id="author">Sakshi Mankar</h3>
+                <p id="job">Web Developer</p>
+                <p id="info">
+                    Sakshi Mankar is a talented web developer with a passion for creating beautiful and functional websites. She enjoys working with clients to bring their visions to life and is skilled in HTML, CSS, JavaScript, and more.
+                </p>
+                <div class="button-container">
+                    <button class="prev-btn">
+                        <i class="fas fa-chevron-left"></i> Prev
+                    </button>
+                    <button class="next-btn">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="random-btn">Surprise Me</button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="review.js"></script>
+</body>
+</html>
